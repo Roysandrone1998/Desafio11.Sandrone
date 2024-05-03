@@ -8,5 +8,5 @@ const usuariosRouter = require("./src/routes/usuario.router.js");
 app.use("/", usuariosRouter);
 
 app.listen(PUERTO, () => {
-    console.log("Escuchando en el Puerto de Mar del Plata");
+    console.log("Escuchando en el Puerto de Paraná");
 })
