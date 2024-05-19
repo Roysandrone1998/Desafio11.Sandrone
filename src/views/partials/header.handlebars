@@ -1,0 +1,26 @@
+<header class="navbar navbar-expand-lg  encabezado">
+    <div class="container-fluid">
+        <img src="https://scontent.fros2-2.fna.fbcdn.net/v/t39.30808-6/359492386_956740008751342_763722496748395248_n.png?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGR7MXR5K0Oc5McSKupv5HDgg0ulrjzqXeCDS6WuPOpd3MPFr6YPD1gC-q-bfc8iA0ecdKMGIdTap3JlI1nBnRv&_nc_ohc=Gr73-QSTcTkQ7kNvgGvhDKp&_nc_ht=scontent.fros2-2.fna&oh=00_AYAeCumyzy90g_KOYqR0rWGTIulsWbbXX8XswrC-cL8yBA&oe=66505A7A"
+            alt="Logo de la tienda" class="tamLogo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav fuentesNav ms-auto">
+                {{#if isAuthenticated}} 
+                    <li class="nav-item">
+                        <a href="/api/users/profile">Mi Perfil</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a href="/login">Inicio de Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register">Registrarse</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </nav>
+    </div>
+</header>
