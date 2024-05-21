@@ -6,7 +6,7 @@ class FundaService {
             const funda = new FundaModel(datosFunda) ;
             return await funda.save();
         } catch (error) {
-            throw new Error("Error al crear el juguete");
+            throw new Error("Error al crear ");
         }
     }
 
