@@ -68,3 +68,23 @@ app.get("/usuario", (req, res) => {
 app.listen(PUERTO, () => {
     console.log(`Escuchando en el puerto ${PUERTO}`);
 })
+
+import swaggerJSDoc from "swagger-jsdoc";
+import swaggerUiExpress from "swagger-ui-express"; 
+
+
+const swaggerOptions = {
+    definition: {
+        openapi: "3.0.1",
+        info: {
+            title: "Documentación de la App Fundas Anime Otakus",
+            description: "App Web dedicada a encontrar tu funda de tu anime favorito para tu celular"
+        }
+    },
+    apis: ["./src/docs/**/*.yaml"]
+}
+
+
+const specs = swaggerJSDoc(swaggerOptions);
+
+app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
